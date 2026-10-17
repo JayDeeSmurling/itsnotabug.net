@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- SEO Podstawowe -->
+        <title>IT Magician: Demystifying the Computer Wizard Myth | itsnotabug.net</title>
+        <meta
+            name="description"
+            content="Is IT really black magic? Exploring what IT work actually looks like: detective troubleshooting, architecture without manuals, forensic debugging, and human-to-computer translation." />
+        <meta
+            name="keywords"
+            content="IT magician, computer wizard, IT troubleshooting, system architecture, debugging, IT support, forensic analysis, IT career" />
+        <meta name="author" content="itsnotabug.net" />
+        <link rel="canonical" href="https://itsnotabug.net/en/it-magician.html" />
+
+        <!-- Open Graph / Facebook / LinkedIn -->
+        <meta property="og:type" content="article" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="itsnotabug.net" />
+        <meta
+            property="og:title"
+            content="IT Magician: Hacker, Wizard, or Detective? // itsnotabug.net" />
+        <meta
+            property="og:description"
+            content="Typing keys is only the final recording step. Discover the reality of IT puzzles, deciphering user reports, and forensic debugging in enterprise environments." />
+        <meta property="og:url" content="https://itsnotabug.net/en/it-magician.html" />
+        <meta property="og:image" content="https://itsnotabug.net/img/head-IT-magician.png" />
+        <meta property="article:published_time" content="2026-08-11" />
+        <meta property="article:section" content="General IT" />
+        <meta property="article:tag" content="IT" />
+        <meta property="article:tag" content="General" />
+        <meta property="article:tag" content="Architecture" />
+        <meta property="article:tag" content="Debugging" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="IT Magician: The Reality Behind the 'Computer Wizard' Myth" />
+        <meta
+            name="twitter:description"
+            content="Why IT work is more like detective forensic analysis and building blocks without instructions than movie hacking." />
+        <meta name="twitter:image" content="https://itsnotabug.net/img/head-IT-magician.png" />
+
+        <meta name="theme-color" content="#0a0d12" />
+
+        <!-- Google Fonts: JetBrains Mono + Inter -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+            rel="stylesheet" />
+
+        <!-- Bootstrap 5 & FontAwesome -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <link rel="stylesheet" href="../../../style.css" />
+    </head>
+
+    <body>
+        <!-- 1. GÓRNY PASEK NAWIGACJI -->
+        <header class="border-bottom border-dark sticky-top bg-black bg-opacity-75" style="backdrop-filter: blur(8px)">
+            <div class="container-xl">
+                <nav class="navbar navbar-expand-lg navbar-dark py-2 px-0">
+                    <a
+                        class="navbar-brand d-flex align-items-center gap-2 font-mono fs-6 text-white"
+                        href="../../index_en.html">
+                        <!-- Miejsce na logo -->
+                        <img
+                            src="../../../img/logo.jpeg"
+                            alt="Logo"
+                            height="70"
+                            class="d-inline-block align-text-top"
+                            style="width: auto" />
+                        <span class="text-success fw-bold">&gt;_</span>
+                        <span>itsnotabug<span class="text-warning">.net</span></span>
+                        <span
+                            class="badge bg-dark border border-secondary text-secondary ms-1"
+                            style="font-size: 0.65rem">
+                            LOGS
+                        </span>
+                    </a>
+
+                    <button
+                        class="navbar-toggler border-0 shadow-none text-white"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mainNav">
+                        <i class="fa-solid fa-bars fs-5"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+                        <ul class="navbar-nav align-items-lg-center gap-lg-3 my-3 my-lg-0 font-mono small">
+                            <li class="nav-item">
+                                <a class="nav-link nav-link-custom" href="../../about-me.html">./about-me</a>
+                            </li>
+
+                            <!-- Przełącznik języka -->
+                            <!--<li class="nav-item ms-lg-2">
+                                <div
+                                    class="btn-group btn-group-sm p-1 bg-dark border border-secondary rounded"
+                                    role="group">
+                                    <a
+                                        href="../../../pl/mfa-what-is-it-really.html"
+                                        class="btn btn-sm btn-dark text-secondary border-0 px-2"
+                                        style="font-size: 0.72rem"
+                                        >PL</a>
+                                    
+                                    <span class="text-secondary align-self-center px-1" style="font-size: 0.7rem"
+                                        >|</span>
+                                    
+                                    <a
+                                        href="../../../en/mfa-what-is-it-really.html"
+                                        class="btn btn-sm btn-dark active fw-bold text-success border-0 px-2"
+                                        style="font-size: 0.72rem"
+                                        >EN</a>
+                                    
+                                    <span class="text-secondary align-self-center px-1" style="font-size: 0.7rem"
+                                        >|</span>
+                                    
+                                    <a
+                                        href="../../../nl/mfa-wat-is-het-echt.html"
+                                        class="btn btn-sm btn-dark text-secondary border-0 px-2"
+                                        style="font-size: 0.72rem"
+                                        >NL</a>
+                                </div>
+                            </li>-->
+
+                            <!-- Odsyłacz do IT-JAY -->
+                            <li class="nav-item ms-lg-2">
+                                <a
+                                    href="https://it-jay.be"
+                                    target="_blank"
+                                    class="btn btn-outline-success btn-sm font-mono px-3">
+                                    <span>IT-JAY.BE &gt;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- 2. GŁÓWNA TREŚĆ ARTYKUŁU -->
+        <main class="py-4 py-md-5">
+            <div class="container-xl" style="max-width: 860px">
+                <!-- Nagłówek artykułu i okno konsoli -->
+                <article class="terminal-window mb-5">
+                    <div class="terminal-header d-flex align-items-center justify-content-between font-mono">
+                        <div class="d-flex align-items-center">
+                            <div class="traffic-dots me-2">
+                                <span class="dot-red"></span>
+                                <span class="dot-yellow"></span>
+                                <span class="dot-green"></span>
+                            </div>
+                            <span class="text-secondary">itsnotabug@core:~/posts/general$</span>
+                        </div>
+                        <div class="d-none d-sm-block text-secondary">cat it-magician.md --render</div>
+                    </div>
+
+                    <div class="p-4 p-md-5">
+                        <!-- Metadane wpisu -->
+                        <div class="d-flex flex-wrap align-items-center gap-2 font-mono small text-secondary mb-3">
+                            <span class="badge bg-dark border border-success text-success">#IT</span>
+                            <span class="badge bg-dark border border-secondary text-secondary">#GENERAL</span>
+                            <span>•</span>
+                            <span><i class="fa-regular fa-clock me-1"></i>8 min read</span>
+                            <span>•</span>
+                            <span>2026-08-11</span>
+                        </div>
+
+                        <!-- Tytuł główny -->
+                        <h1 class="h2 fw-bold text-white font-mono mb-3">IT Magician</h1>
+                        <p class="lead text-secondary" style="font-size: 1.1rem">
+                            How many times have I heard at work, "IT is black magic", "I don't understand how you can do
+                            this job", "IT are magicians," and other similar comments.
+                        </p>
+
+                        <hr class="border-secondary my-4" />
+
+                        <!-- Treść właściwa artykułu -->
+                        <div class="article-body">
+                            <!-- Grafika -->
+                            <figure class="tech-figure">
+                                <div
+                                    class="terminal-header d-flex align-items-center justify-content-between font-mono">
+                                    <span class="text-secondary"
+                                        ><i class="fa-solid fa-image me-1"></i> fig_01_it-magician.png</span
+                                    >
+                                    <span class="text-secondary">resolution: 1600x900 [WebP]</span>
+                                </div>
+                                <img
+                                    src="../../../img/head-IT-magician.png"
+                                    alt="MFA Authentication Sequence Diagram"
+                                    loading="lazy" />
+                                <figcaption class="tech-caption font-mono">
+                                    <span class="text-warning">[Fig. 1]</span> A hacker or an IT magician?
+                                </figcaption>
+                            </figure>
+                            <h2>The Myth of the "Computer Wizard"</h2>
+
+                            <p>
+                                The common image of an IT guy is a hoodie-wearing figure punching keys at the speed of a
+                                machine gun in the dark of night, while cascades of green characters glide across the
+                                screen (shoutout to all Matrix fans!). The reality, however, is much more interesting
+                                (in my opinion), though definitely less cinematic. Users often call us "computer
+                                wizards." If you think my job is just tapping on a keyboard, that's like saying a
+                                writer's job is "placing letters." Letters are just a tool. The real magic happens where
+                                the translation from user language into technical language begins, where a problem
+                                becomes a solution, and everything looks like magic.
+                            </p>
+
+                            <h2>1. Tapping on the keyboard is only a small part</h2>
+
+                            <p>
+                                The truth is a bit different than most people imagine: I spend most of my time not
+                                typing but guessing.Yes, you read that right, guessing. IT job in most cases is a
+                                detective's job. You have to understand a lot of things, for example:
+                            </p>
+                            <ul>
+                                <li>
+                                    If you need to write or complete the code of some program or automation script and I
+                                    read, what the author meant (even if I am the author from half a year ago) and for
+                                    the life of me I can't understand why this function is written this way. It makes no
+                                    sense. Yes, I know, well-documented code is easy to read. Let the one who always has
+                                    perfect documentation of their own code throw their keyboard at me. Go ahead, I'll
+                                    wait...
+                                </li>
+                                <li>
+                                    Why is the system behaving this way? What was I doing before it crashed? Was it my
+                                    fault that it crashed?
+                                </li>
+                                <li>
+                                    What does a user mean when they say, for example, "My printer isn't working?" In my
+                                    experience, the printer is rarely the actual cause of such a message.
+                                </li>
+                                <li>
+                                    Where is this one little nasty thing hiding, which kills the entire project? An
+                                    example from a recent project at London Heathrow: we had a loop on a switch and for
+                                    the life of us, we couldn't find it. Only after a few hours did a colleague of mine
+                                    manage to find it, by accident ;) because that's often how IT problems are solved.
+                                </li>
+                            </ul>
+                            <p>
+                                Tapping on the keyboard is really the last stage of my work– it is just a recording of
+                                the solution to the puzzle that has just been unravel in your head. Documenting your
+                                thought process and building a Knowledge Base that your fellow magicians can draw from.
+                            </p>
+
+                            <h2>2. Architecture, or building with blocks without instructions</h2>
+
+                            <p>
+                                Imagine you are given a task: build a castle out of blocks but you have no instructions,
+                                and the blocks change shape every now and then, because"business has changed
+                                requirements". Solving IT puzzles means designing systems that will survive these
+                                changes.
+                            </p>
+                            <ul>
+                                <li>
+                                    How to switch from an old network to a new one without the business noticing the
+                                    changes?
+                                </li>
+                                <li>How can you make the system handle 100 users as efficiently as 100,000?</li>
+                                <li>
+                                    Why can't Jason from HR print when 50 other people in the office don't have this
+                                    problem?
+                                </li>
+                                <li>
+                                    Why do our security systems panic when we launch our new, crazy-expensive accounting
+                                    software? The vendor has all the ISO, NIS, GDPR, and whatever certification we could
+                                    possibly want.
+                                </li>
+                            </ul>
+                            <p>
+                                By the way, I had this exact situation at work. A large financial software provider
+                                passed all certifications and audits with flying colors. And what happened? It turned
+                                out that logging in only required guessing a predictable token. The token was sent in
+                                clear text (not via HTTPS or TLS), not even in encrypted form (like SHA-256 or
+                                anything). Just plain text. Guessing another token was trivial and granted access to the
+                                financial data of many large companies that the software supported. I reported the bug,
+                                but I don't know if they patched it. I hope so.
+                            </p>
+
+                            <h2>3. "It's Not a Bug" – a moment of enlightenment</h2>
+
+                            <p>
+                                The biggest IT puzzles are those where the system works when it either shouldn't or
+                                should work differently.
+                            </p>
+
+                            <p>
+                                Finding the cause of an error (debugging) is the purest form of forensic work. You
+                                analyze logs, examine traces, formulate hypotheses and disprove them. You test
+                                alternative solutions.And when you finally find the reason – that “AHA!” feeling is
+                                better than any written script.
+                            </p>
+
+                            <h2>4. Communication, or translating from "human" to "computer"</h2>
+
+                            <p>
+                                The most difficult puzzle in IT is often understanding another person. Decomposing a
+                                problem that the user describes as "my computer isn't working" into a set of information
+                                that will allow for a diagnosis is an art in itself.You have to be a translator,
+                                psychologist, and strategist all rolled into one. You have to understand that someone
+                                might not understand. That can be very difficult.
+                            </p>
+
+                            <h2>5. Summary:</h2>
+
+                            <p>
+                                If you're looking for a job where you'll just be copying instructions, IT will
+                                disappoint you. If however,you love this moment when after a long time spent on thinking
+                                all the pieces of the puzzle fall into place, you understand the needs of users and the
+                                fact that they are often not technical– welcome home. Here, every line of code, every
+                                wire, and every click is a solution to a small intellectual battle.
+                            </p>
+                        </div>
+
+                        <!-- 3. STOPKA ARTYKUŁU: AUTOR + MOSTEK DO IT-JAY -->
+                        <div class="mt-5 pt-4 border-top border-secondary">
+                            <div class="card bg-black border-secondary p-3 rounded">
+                                <div class="row align-items-center g-3 font-mono">
+                                    <div class="col-md-8">
+                                        <div class="text-success small fw-bold mb-1">
+                                            // Need an implementation for your business?
+                                        </div>
+                                        <p class="text-secondary small mb-0 font-sans">
+                                            We secure small business workflows and office infrastructure across
+                                            Flanders. We configure Microsoft 365 tenant protection, automated backups,
+                                            and anti-phishing safeguards.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 text-md-end">
+                                        <a
+                                            href="https://it-jay.be"
+                                            target="_blank"
+                                            class="btn btn-outline-success btn-sm font-mono w-100 w-md-auto">
+                                            Visit IT-JAY.BE &gt;
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- NAWIGACJA POPRZEDNI / NASTĘPNY WPIS -->
+                <nav class="d-flex justify-content-between align-items-center font-mono small mb-5">
+                    <a href="../07/copying-a-website.html" class="text-secondary text-decoration-none hover-white">
+                        <i class="fa-solid fa-arrow-left me-1"></i> &lt; Previous: Copying a website
+                    </a>
+                    <a href="../09/low-tech-hobby.html" class="text-success text-decoration-none hover-white">
+                        Next: Low tech hobby &gt; <i class="fa-solid fa-arrow-right ms-1"></i>
+                    </a>
+                </nav>
+
+                <!-- STOPKA -->
+                <footer
+                    class="d-flex flex-column flex-sm-row justify-content-between align-items-center py-3 text-secondary small border-top border-dark font-mono">
+                    <div>© 2026 itsnotabug.net // Engineering &amp; Digital Garden by IT-JAY.</div>
+                    <div class="d-flex gap-3 mt-2 mt-sm-0">
+                        <a href="https://it-jay.be" class="text-secondary text-decoration-none hover-white">IT-JAY</a>
+                        <!--<span>•</span>
+                        <a href="/feed.xml" class="text-secondary text-decoration-none hover-white">RSS</a>-->
+                        <span>•</span>
+                        <a
+                            href="https://it-jay.be/privacy-policy"
+                            class="text-secondary text-decoration-none hover-white"
+                            >Privacy Policy</a
+                        >
+                    </div>
+                </footer>
+            </div>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

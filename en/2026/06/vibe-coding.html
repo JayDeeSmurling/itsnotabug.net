@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- SEO Podstawowe -->
+        <title>Vibe Coding: The Risks and Realities of AI-Generated Software | itsnotabug.net</title>
+        <meta
+            name="description"
+            content="AI-generated software: is it beneficial or dangerous? An engineering perspective on vibe coding, shadow IT, supply chain risks, data leaks, and secure-by-design practices." />
+        <meta name="keywords" content="vibe coding, LLM, AI software development, shadow IT, supply chain attack, SQL injection, cybersecurity, prompt engineering" />
+        <meta name="author" content="itsnotabug.net" />
+        <link rel="canonical" href="https://itsnotabug.net/en/vibe-coding.html" />
+
+        <!-- Open Graph / Facebook / LinkedIn -->
+        <meta property="og:type" content="article" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="itsnotabug.net" />
+        <meta
+            property="og:title"
+            content="Vibe Coding: Is AI-Generated Code a Gift or a Security Trap? // itsnotabug.net" />
+        <meta
+            property="og:description"
+            content="Developing software where no human understands the source code. A look into corporate productivity gains vs. shadow IT vulnerabilities and code injection risks." />
+        <meta property="og:url" content="https://itsnotabug.net/en/vibe-coding.html" />
+        <meta property="og:image" content="https://itsnotabug.net/img/head-vibe-coding.png" />
+        <meta property="article:published_time" content="2026-06-11" />
+        <meta property="article:section" content="Coding" />
+        <meta property="article:tag" content="Coding" />
+        <meta property="article:tag" content="AI" />
+        <meta property="article:tag" content="Cybersecurity" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Vibe Coding: The Risks and Realities of AI-Generated Code" />
+        <meta
+            name="twitter:description"
+            content="AI-generated code created without human code review. The promises of zero-cost tools vs. debugging nightmares and security flaws." />
+        <meta name="twitter:image" content="https://itsnotabug.net/img/head-vibe-coding.png" />
+
+        <meta name="theme-color" content="#0a0d12" />
+
+        <!-- Google Fonts: JetBrains Mono + Inter -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+            rel="stylesheet" />
+
+        <!-- Bootstrap 5 & FontAwesome -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <link rel="stylesheet" href="../../../style.css" />
+    </head>
+
+    <body>
+        <!-- 1. GÓRNY PASEK NAWIGACJI -->
+        <header class="border-bottom border-dark sticky-top bg-black bg-opacity-75" style="backdrop-filter: blur(8px)">
+            <div class="container-xl">
+                <nav class="navbar navbar-expand-lg navbar-dark py-2 px-0">
+                    <a
+                        class="navbar-brand d-flex align-items-center gap-2 font-mono fs-6 text-white"
+                        href="../../index_en.html">
+                        <!-- Miejsce na logo -->
+                        <img
+                            src="../../../img/logo.jpeg"
+                            alt="Logo"
+                            height="70"
+                            class="d-inline-block align-text-top"
+                            style="width: auto" />
+                        <span class="text-success fw-bold">&gt;_</span>
+                        <span>itsnotabug<span class="text-warning">.net</span></span>
+                        <span
+                            class="badge bg-dark border border-secondary text-secondary ms-1"
+                            style="font-size: 0.65rem">
+                            LOGS
+                        </span>
+                    </a>
+
+                    <button
+                        class="navbar-toggler border-0 shadow-none text-white"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mainNav">
+                        <i class="fa-solid fa-bars fs-5"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+                        <ul class="navbar-nav align-items-lg-center gap-lg-3 my-3 my-lg-0 font-mono small">
+                            <li class="nav-item">
+                                <a class="nav-link nav-link-custom" href="../../about-me.html">./about-me</a>
+                            </li>
+
+                            <!-- Przełącznik języka -->
+                            <!--<li class="nav-item ms-lg-2">
+                                <div
+                                    class="btn-group btn-group-sm p-1 bg-dark border border-secondary rounded"
+                                    role="group">
+                                    <a
+                                        href="../../../pl/mfa-what-is-it-really.html"
+                                        class="btn btn-sm btn-dark text-secondary border-0 px-2"
+                                        style="font-size: 0.72rem"
+                                        >PL</a>
+                                    
+                                    <span class="text-secondary align-self-center px-1" style="font-size: 0.7rem"
+                                        >|</span>
+                                    
+                                    <a
+                                        href="../../../en/mfa-what-is-it-really.html"
+                                        class="btn btn-sm btn-dark active fw-bold text-success border-0 px-2"
+                                        style="font-size: 0.72rem"
+                                        >EN</a>
+                                    
+                                    <span class="text-secondary align-self-center px-1" style="font-size: 0.7rem"
+                                        >|</span>
+                                    
+                                    <a
+                                        href="../../../nl/mfa-wat-is-het-echt.html"
+                                        class="btn btn-sm btn-dark text-secondary border-0 px-2"
+                                        style="font-size: 0.72rem"
+                                        >NL</a>
+                                </div>
+                            </li>-->
+
+                            <!-- Odsyłacz do IT-JAY -->
+                            <li class="nav-item ms-lg-2">
+                                <a
+                                    href="https://it-jay.be"
+                                    target="_blank"
+                                    class="btn btn-outline-success btn-sm font-mono px-3">
+                                    <span>IT-JAY.BE &gt;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- 2. GŁÓWNA TREŚĆ ARTYKUŁU -->
+        <main class="py-4 py-md-5">
+            <div class="container-xl" style="max-width: 860px">
+                <!-- Nagłówek artykułu i okno konsoli -->
+                <article class="terminal-window mb-5">
+                    <div class="terminal-header d-flex align-items-center justify-content-between font-mono">
+                        <div class="d-flex align-items-center">
+                            <div class="traffic-dots me-2">
+                                <span class="dot-red"></span>
+                                <span class="dot-yellow"></span>
+                                <span class="dot-green"></span>
+                            </div>
+                            <span class="text-secondary">itsnotabug@core:~/posts/coding$</span>
+                        </div>
+                        <div class="d-none d-sm-block text-secondary">cat vibe-coding.md --render</div>
+                    </div>
+
+                    <div class="p-4 p-md-5">
+                        <!-- Metadane wpisu -->
+                        <div class="d-flex flex-wrap align-items-center gap-2 font-mono small text-secondary mb-3">
+                            <span class="badge bg-dark border border-success text-success">#CODING</span>
+                            <span class="badge bg-dark border border-secondary text-secondary">#AI</span>
+                            <span>•</span>
+                            <span><i class="fa-regular fa-clock me-1"></i>7 min read</span>
+                            <span>•</span>
+                            <span>2026-06-11</span>
+                        </div>
+
+                        <!-- Tytuł główny -->
+                        <h1 class="h2 fw-bold text-white font-mono mb-3">Vibe Coding</h1>
+                        <p class="lead text-secondary" style="font-size: 1.1rem">
+                            AI-generated code. Is it good, is it bad? What is it and what are the risks?
+                        </p>
+
+                        <hr class="border-secondary my-4" />
+
+                        <!-- Treść właściwa artykułu -->
+                        <div class="article-body">
+                            <!-- Grafika -->
+                            <figure class="tech-figure">
+                                <div
+                                    class="terminal-header d-flex align-items-center justify-content-between font-mono">
+                                    <span class="text-secondary"
+                                        ><i class="fa-solid fa-image me-1"></i> fig_01_vibe-coding.png</span
+                                    >
+                                    <span class="text-secondary">resolution: 1600x900 [WebP]</span>
+                                </div>
+                                <img
+                                    src="../../../img/head-vibe-coding.png"
+                                    alt="MFA Authentication Sequence Diagram"
+                                    loading="lazy" />
+                                <figcaption class="tech-caption font-mono">
+                                    <span class="text-warning">[Fig. 1]</span> Vibe coding header image.
+                                </figcaption>
+                            </figure>
+
+                            <h2>What is vibe coding?</h2>
+
+                            <p>To quote <a href="https://en.wikipedia.org/wiki/Vibe_coding">Wikipedia</a>:</p>
+
+                            <p>
+                                <quote
+                                    ><i
+                                        >Vibe coding is a chatbot-based software development approach in which a
+                                        developer describes a project or task to a large language model (LLM), which
+                                        generates code based on suggestions. The developer does not verify or edit the
+                                        code; instead, the developer uses only the tools and results provided by the LLM
+                                        to evaluate it and asks the LLM for improvements. Unlike traditional AI-assisted
+                                        coding, the developer avoids code analysis, accepts AI-suggested additions
+                                        without human review, and focuses more on iterative experimentation than on code
+                                        correctness or structure.</i
+                                    ></quote
+                                >
+                            </p>
+
+                            <p>
+                                In other words, we're talking about creating software where no human has ever seen, let
+                                alone understood, the source code. Could this be beneficial for companies? Of course it
+                                is. But it can also be harmful.
+                            </p>
+
+                            <h2>Why?</h2>
+
+                            <p>
+                                Before we delve into the potential benefits and risks, let's first consider why anyone
+                                would want to create and use custom apps.
+                            </p>
+
+                            <p>
+                                From a large company's perspective, the benefits are obvious. They can have a tool that
+                                solves a problem, and implementing it takes days (or hours) instead of months. Best of
+                                all, it doesn't require a highly paid IT specialist. Anyone in the company can create an
+                                application that everyone can use. The application is ready in the blink of an eye, can
+                                be modified almost immediately, and the implementation cost was €0. Great, right?
+                            </p>
+
+                            <p>
+                                Something similar is already happening; just think of VBA or Power Automate. Users can
+                                create their own automations for certain tasks. This is cool, but it requires some
+                                knowledge of the tool you're using. Not everyone understands how complex Power Automate
+                                can be and how difficult it can sometimes be to actually get it to do what you want.
+                                Unfortunately, VBA is even more difficult and requires appropriate programming
+                                knowledge.
+                            </p>
+
+                            <p>
+                                With vibe coding, no skills are required. Just ask your LLM what you want, and they'll
+                                create it for you. Want something different? Just ask again. AI coding can accelerate
+                                your workflow, whether you're a developer or an average user. This seems like a boon for
+                                workers under constant pressure to deliver more with less.
+                            </p>
+
+                            <h2>Potential use cases</h2>
+
+                            <p>
+                                The potential applications are almost limitless. Just think of any repetitive task you
+                                perform every day. You can create an app for it.
+                            </p>
+
+                            <p>
+                                Some simple ideas, probably possible to implement using Power Automate or just a bit of
+                                Python ;)
+                            </p>
+                            <ul>
+                                <li>
+                                    Prepare a daily stock report, put it into a company template and send it to your
+                                    boss.
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>A corporate event registration app that includes a button to donate to charity.</li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    Automatically generated business emails. You type your message, and the app places
+                                    it on company stationery and sends it. This can include an activity tracking
+                                    dashboard that lets you see how many people have opened your message.
+                                </li>
+                            </ul>
+
+                            <p>The ideas are endless.</p>
+
+                            <h2>What is artificial intelligence?</h2>
+
+                            <p>
+                                Do you really know what AI is? Artificial intelligence, you say? Sort of. That's what AI
+                                means, but the tools currently being touted as AI tools have nothing to do with
+                                intelligence. They're called "Large Language Models" (LLMs). These are highly complex
+                                statistical models that predict which words should be displayed based on a query. They
+                                calculate the first word, then go back to the model to calculate the second, third, and
+                                so on. They're programmed to simulate human personality. Try typing something unpleasant
+                                into the ChataGPT command line, and the program will start apologizing.
+                            </p>
+
+                            <p>The machine is not conscious or intelligent!</p>
+
+                            <p>
+                                All LLMs have absorbed the entire knowledge of the internet. Every possible source of
+                                human-generated content is in their database. The answers you see are based on what the
+                                LLM has previously seen on some forum or website. This isn't an intelligent machine's
+                                response; it's a replica of human behavior, a simulation.
+                            </p>
+
+                            <h2>What are the risks?</h2>
+
+                            <p>
+                                By using LLM programs that aren't authorized by your company, you could inadvertently
+                                cause data leaks. Did you know that any information you submit to these tools will be
+                                used to train the model for all others? It could therefore answer someone's query using
+                                your top-secret documents. This applies not only to coding, but to all queries.
+                            </p>
+
+                            <p>
+                                The code that LLM generates is someone else's code, only slightly modified to suit your
+                                purpose. LLM doesn't understand this. So what happens if the original author of the code
+                                finds out you're using their work? They could sue the company.
+                            </p>
+
+                            <p>
+                                Is your application secure? Are you sure? How can you identify and track all the
+                                libraries LLM used to generate your application? How can you be sure they don't have
+                                security flaws? Since you've never written a single line of code, you have no idea
+                                whether the application is secure or not. Worse, you have no idea how to test it. One of
+                                the simplest problems is the login prompt and SQL injection attack. What would happen if
+                                I entered my username as
+                            </p>
+                            <!-- BLOK TECHNICZNY / KOD -->
+                            <pre class="cli-box"><code></code>TEST' OR 'x'='x</pre>
+
+                            <p>
+                                and the same as my password? If the code were written using only basic SQL syntax, I
+                                would have logged in without knowing the login.
+                            </p>
+
+                            <p>
+                                If your application uses an external API, is it secure? How do you know what information
+                                is being sent through that API? You might be sending data to an attacker, and LLM won't
+                                inform you because it doesn't understand the security context. This is called a
+                                <span class="text-success">"supply chain attack."</span>
+                            </p>
+
+                            <p>
+                                If your application ever grows and becomes critical to the company, management may
+                                decide to hire a real developer to maintain and develop it further. This person will
+                                need significant time to understand the potentially chaotic and undocumented code
+                                written by the LLM. This slows development and can lead to undetected security issues. I
+                                call this a "debugging nightmare."
+                            </p>
+
+                            <h2>Countermeasures</h2>
+
+                            <p>
+                                The whole topic of vibe coding is a serious problem for internal IT departments. It
+                                falls under the umbrella of "shadow IT," where users find clever ways to do things they
+                                shouldn't.
+                            </p>
+
+                            <p>
+                                If you allow users to create their own applications and accept the risk, fine. However,
+                                I still recommend enforcing code review by internal IT. Conduct penetration testing,
+                                even simple ones like the SQL injection attacks described earlier. Limit the access you
+                                grant to the application. Run it on a secured network or in a secured virtual machine.
+                                Make sure you truly understand what the application does, what it sends, and where it
+                                goes. Inform users that they may inadvertently disclose data.
+                            </p>
+
+                            <p>
+                                In my opinion, using LLMs to write code only makes sense if you write the code yourself
+                                and ask the AI for help with specific issues. But even then, you shouldn't just
+                                mindlessly copy and paste code. Take the time to read it, understand it, and make sure
+                                it doesn't do anything strange or unexpected. I do this every time I get stuck. LLMs
+                                have been very helpful in developing many small tools, both for myself and for
+                                company-wide applications. However, I always took the time to read the code provided,
+                                checking dependencies and libraries.
+                            </p>
+
+                            <h2>Summary</h2>
+
+                            <p>
+                                I'm not opposed to vibe coding if your company has the capabilities to implement the
+                                appropriate security measures. This process can certainly improve many processes within
+                                your company. However, you need to educate your users about the risks associated with
+                                using LLM for coding. If you're a developer yourself, I suggest using AI tools as a
+                                support, not a replacement. Remember to always write code with a "secure by design"
+                                approach.
+                            </p>
+
+                            <h2>Sources</h2>
+                            <ol>
+                                <li>
+                                    <a href="https://more.globant.com/transforming-software-development-with-gen-ai"
+                                        >Globant and MIT Technology Review, Transforming software development with
+                                        generative AI</a
+                                    >
+                                </li>
+                                <li><a href="https://en.wikipedia.org/wiki/Vibe_coding">Wikipedia</a></li>
+                                <li>
+                                    <a href="https://more.globant.com/transforming-software-development-with-gen-ai"
+                                        >Globant</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="https://www.contrastsecurity.com/glossary/vibe-coding"
+                                        >Contrast Security</a
+                                    >
+                                </li>
+                                <li><a href="https://www.youtube.com/watch?v=VHHT6W-N0ak">YouTube</a></li>
+                            </ol>
+                        </div>
+
+                        <!-- 3. STOPKA ARTYKUŁU: AUTOR + MOSTEK DO IT-JAY -->
+                        <div class="mt-5 pt-4 border-top border-secondary">
+                            <div class="card bg-black border-secondary p-3 rounded">
+                                <div class="row align-items-center g-3 font-mono">
+                                    <div class="col-md-8">
+                                        <div class="text-success small fw-bold mb-1">
+                                            // Need an implementation for your business?
+                                        </div>
+                                        <p class="text-secondary small mb-0 font-sans">
+                                            We secure small business workflows and office infrastructure across
+                                            Flanders. We configure Microsoft 365 tenant protection, automated backups,
+                                            and anti-phishing safeguards.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 text-md-end">
+                                        <a
+                                            href="https://it-jay.be"
+                                            target="_blank"
+                                            class="btn btn-outline-success btn-sm font-mono w-100 w-md-auto">
+                                            Visit IT-JAY.BE &gt;
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- NAWIGACJA POPRZEDNI / NASTĘPNY WPIS -->
+                <nav class="d-flex justify-content-between align-items-center font-mono small mb-5">
+                    <a href="../../index_en.html" class="text-secondary text-decoration-none hover-white">
+                        <i class="fa-solid fa-arrow-left me-1"></i> &lt; Previous: Main page
+                    </a>
+                    <a href="../07/copying-a-website.html" class="text-success text-decoration-none hover-white">
+                        Next: Copying a website &gt; <i class="fa-solid fa-arrow-right ms-1"></i>
+                    </a>
+                </nav>
+
+                <!-- STOPKA -->
+                <footer
+                    class="d-flex flex-column flex-sm-row justify-content-between align-items-center py-3 text-secondary small border-top border-dark font-mono">
+                    <div>© 2026 itsnotabug.net // Engineering &amp; Digital Garden by IT-JAY.</div>
+                    <div class="d-flex gap-3 mt-2 mt-sm-0">
+                        <a href="https://it-jay.be" class="text-secondary text-decoration-none hover-white">IT-JAY</a>
+                        <!--<span>•</span>
+                        <a href="/feed.xml" class="text-secondary text-decoration-none hover-white">RSS</a>-->
+                        <span>•</span>
+                        <a
+                            href="https://it-jay.be/privacy-policy"
+                            class="text-secondary text-decoration-none hover-white"
+                            >Privacy Policy</a
+                        >
+                    </div>
+                </footer>
+            </div>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

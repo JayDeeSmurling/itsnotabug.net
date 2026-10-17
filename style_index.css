@@ -1,0 +1,141 @@
+
+        :root {
+            --bg-base: #0a0d12;
+            --bg-card: #0d1117;
+            --bg-header: #161b22;
+            --border-color: #21262d;
+            --c-yellow: #ffba49;
+            --c-prompt: #58a6ff;
+            --c-text: #e6edf3;
+            --c-dim: #8b949e;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--c-text);
+            font-family: 'JetBrains Mono', monospace;
+            background-image: 
+                linear-gradient(rgba(33, 38, 45, 0.25) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(33, 38, 45, 0.25) 1px, transparent 1px);
+            background-size: 28px 28px;
+            background-position: -1px -1px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 1.5rem;
+        }
+
+        /* Centralne okno */
+        .gateway-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            max-width: 7000px;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+        }
+
+        .terminal-header {
+            background: var(--bg-header);
+            border-bottom: 1px solid var(--border-color);
+            padding: 10px 18px;
+            font-size: 0.78rem;
+        }
+
+        .traffic-dots {
+            display: flex;
+            gap: 7px;
+        }
+
+        .traffic-dot {
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .dot-close { background: #ff5f56; }
+        .dot-min { background: #ffbd2e; }
+        .dot-max { background: #27c93f; }
+
+        /* Wielkie logo terminalowe */
+        .giant-logo {
+            font-size: clamp(2.8rem, 8vw, 4.8rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            user-select: none;
+        }
+
+        .giant-logo .prompt-sign {
+            color: var(--c-prompt);
+        }
+
+        .giant-logo .brand-dot {
+            color: var(--c-yellow);
+        }
+
+        /* Slogan */
+        .slogan-box {
+            font-size: clamp(0.95rem, 2.4vw, 1.15rem);
+            color: var(--c-dim);
+            line-height: 1.5;
+        }
+
+        .terminal-caret {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background: var(--c-yellow);
+            margin-left: 4px;
+            animation: blink 1s infinite steps(1);
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Przyciski wyboru języka */
+        .lang-button {
+            background: #141922;
+            border: 1px solid var(--border-color);
+            color: var(--c-text);
+            text-decoration: none;
+            padding: 0.85rem 1.25rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .lang-button:hover {
+            border-color: var(--c-yellow);
+            background: #19222d;
+            color: var(--c-yellow);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+        }
+
+        .lang-button .lang-code {
+            font-size: 0.75rem;
+            opacity: 0.65;
+            color: var(--c-prompt);
+        }
+
+        .footer-note {
+            font-size: 0.75rem;
+            color: var(--c-dim);
+            border-top: 1px solid var(--border-color);
+            background: rgba(0, 0, 0, 0.2);
+            padding: 9px 18px;
+        }
